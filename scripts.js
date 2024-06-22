@@ -1,4 +1,17 @@
-const form = document.getElementById("form");
-const mascara = form.elements['masc'].value;
-const subrede = form.elements['subrede'].value;
-const endereco = form.elements['endereco'].value;
+let form = document.getElementById("form");
+let mascara = form.elements['masc'];
+let subrede = form.elements['subrede'];
+let endereco = form.elements['endereco'];
+let btnLimpar = document.getElementById("limpar")
+
+function handleBtnLimpar(){
+    if(subrede.value !== '' || endereco.value !== ''){
+        subrede.value = ''
+        endereco.value = ''
+    }
+    handleBtnLimpar()
+}
+
+
+btnLimpar.addEventListener("click", handleBtnLimpar)
+
