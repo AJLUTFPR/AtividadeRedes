@@ -72,3 +72,18 @@ button {
 .resultado{
     display: none;
 }
+
+table{
+    border-collapse: collapse;
+    border-bottom: 1px solid var(--roxo);
+    margin-bottom: 15px;
+}
+
+th, td{
+    padding: 10px;
+}
+
+th{
+    border-top: 1px solid var(--roxo);
+    border-bottom: 1px solid var(--roxo);
+}

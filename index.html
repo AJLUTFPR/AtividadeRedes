@@ -29,7 +29,7 @@
            <form id="form">
                 <div class="input">
                     <label>Endereço ip:</label>
-                    <input class="endereco" name="endereco" type="text">
+                    <input class="endereco" name="endereco" type="text" oninput="permitirNumerosEPonto(this)">
                 </div>
 
                 <div class="input">
@@ -84,7 +84,20 @@
    </div>
 
    <div class="resultado" id="resultado">
-        <p>Máscara</p>
+        <table id="tabela">
+            <tr>
+                <th id="tituloSubrede">Subrede</th>
+                <th id="tituloPrimeiroEnd">Primeiro Endereço</th>
+                <th id="tituloUltimoEnd">Último Endereço</th>
+                <th id="tituloMascara">Máscara</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>192.50.32.1</td>
+                <td>192.50.35.254</td>
+                <td>/22</td>
+            </tr>
+        </table>
         <button id="voltar">Voltar</button>
    </div>
 

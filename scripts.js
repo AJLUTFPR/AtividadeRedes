@@ -1,9 +1,14 @@
-let form = document.getElementById("form");
-let mascara = form.elements['masc'];
-let subrede = form.elements['subrede'];
-let endereco = form.elements['endereco'];
-let btnLimpar = document.getElementById("limpar")
-let btnVoltar = document.querySelector("#voltar")
+var form = document.getElementById("form");
+var mascara = form.elements['masc'];
+var subrede = form.elements['subrede'];
+var endereco = form.elements['endereco'];
+var btnLimpar = document.getElementById("limpar")
+var btnVoltar = document.querySelector("#voltar")
+var tabela = document.querySelector("#tabela")
+var tituloSubrede = document.querySelector("#tituloSubrede")
+var tituloPrimeiroEnd = document.querySelector("#tituloPrimeiroEnd")
+var tituloUltimoEnd = document.querySelector("#tituloUltimoEnd")
+var tituloMascara = document.querySelector("#tituloMascara")
 
 btnLimpar.addEventListener("click", handleBtnLimpar)
 btnVoltar.addEventListener("click", handleBtnVoltar)
@@ -27,3 +32,9 @@ function handleBtnVoltar(){
     resultado.style.display = "none";
 }
 
+function permitirNumerosEPonto(input) {
+    input.value = input.value.replace(/[^\d.]/g, '');
+    input.value = input.value.replace(/(\.\.+)/g, '.');
+}
+
+permitirNumerosEPonto()
