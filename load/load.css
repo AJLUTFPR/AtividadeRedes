@@ -1,0 +1,27 @@
+body {
+    width: 100%;
+    height: 100vh; /* Usando 100vh para garantir altura total da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Removendo margens padrão do body */
+}
+
+.loader {
+    display: none;
+    position: fixed; /* Posicionamento fixo para cobrir toda a viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente */
+    z-index: 9999; /* Garante que o loader fique acima de todo o conteúdo */
+}
+
+.load {
+    text-align: center;
+    position: absolute; /* Posição absoluta para centralizar dentro do .loader */
+    top: 50%; /* Coloca o topo do .load no meio da viewport */
+    left: 50%; /* Coloca a esquerda do .load no meio da viewport */
+    transform: translate(-50%, -50%); /* Translada o .load para o centro exato */
+}

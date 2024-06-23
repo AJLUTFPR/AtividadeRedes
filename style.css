@@ -68,3 +68,7 @@ button {
     margin-bottom: 50px;
     color: var(--roxo);
 }
+
+.resultado{
+    display: none;
+}

@@ -8,11 +8,21 @@
    <link rel="icon" href="./img/logo.png">
    <link rel="stylesheet" href="./style.css">
    <script src="./scripts.js" defer></script>
+
+    <link rel="stylesheet" href="./load/load.css">
+    <script src="./load/load.js" defer></script>
+
    <title>Calcula Endereço</title>
 </head>
 
 
 <body>
+
+    <div class="loader" id="loader">
+        <img class="load" src="./img/loading-54.gif" alt="">
+    </div>
+
+
    <div class="container">
        <h1 id="titulo">Calcula Endereço</h1>
        <div class="content">
@@ -69,16 +79,16 @@
        </form>
        <div class="botoes">
            <button class="limpar" id="limpar">Limpar</button>
-           <button class="calcular">Calcular</button>
+           <button class="calcular" id="calcular">Calcular</button>
        </div>
+   </div>
 
-
+   <div class="resultado" id="resultado">
+        <p>Máscara</p>
    </div>
 
 
 </body>
-
-
 </html>
 
 
